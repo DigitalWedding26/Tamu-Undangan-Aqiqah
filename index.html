@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f3e9">
+  <meta name="description" content="Generator tautan undangan personal Maken Invited untuk Tasyakuran Aqiqah dan Ulang Tahun Mohammad Ghazwan Dzaky.">
+  <title>Generator Undangan Tamu | Maken Invited</title>
+  <style>
+    :root{
+      --cream:#fbf7ef;--paper:#fffdf8;--ink:#503821;--muted:#8c765d;
+      --blue:#6ca6d8;--blue-soft:#e7f2fa;--blue-deep:#3d79aa;
+      --gold:#c89950;--gold-soft:#f5e7ca;--line:#eadcc6;
+      --green:#5c8b68;--shadow:0 16px 44px rgba(104,78,43,.10);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at 12% 8%,rgba(218,235,248,.72),transparent 24rem),radial-gradient(circle at 90% 25%,rgba(247,229,196,.55),transparent 23rem),var(--cream)}
+    button,input,textarea{font:inherit}
+    .page{width:min(100% - 28px,920px);margin:0 auto;padding:30px 0 54px}
+    .topline{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+    .brand{display:flex;align-items:center;gap:11px;min-width:0}
+    .brand-mark{width:46px;height:46px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(145deg,#fff,#e7f2fa);border:1px solid #dce9ef;color:var(--blue-deep);font-size:23px;box-shadow:0 5px 15px rgba(72,115,146,.10)}
+    .brand-name{font-size:16px;font-weight:bold;letter-spacing:.04em}
+    .brand-sub{font:11px/1.4 Arial,sans-serif;color:var(--muted);letter-spacing:.11em;text-transform:uppercase;margin-top:3px}
+    .status{border:1px solid #e5d6bb;background:rgba(255,253,248,.78);border-radius:999px;padding:8px 12px;font:11px Arial,sans-serif;color:#85663c;white-space:nowrap}
+    .hero{text-align:center;padding:24px 18px 26px;position:relative;overflow:hidden;border:1px solid rgba(210,179,130,.58);border-radius:28px;background:linear-gradient(155deg,rgba(255,255,255,.93),rgba(255,250,239,.92));box-shadow:var(--shadow)}
+    .hero:before,.hero:after{content:"✦";position:absolute;color:#e8bf6d;font-size:25px;opacity:.65}.hero:before{left:7%;top:16%}.hero:after{right:8%;bottom:15%}
+    .eyebrow{font:700 10px Arial,sans-serif;letter-spacing:.25em;color:#a37e48;text-transform:uppercase;margin:0 0 11px}
+    h1{font-size:clamp(29px,5vw,43px);line-height:1.08;margin:0;color:#694722;font-weight:normal}
+    h1 span{color:var(--blue-deep);font-style:italic}
+    .hero p{max-width:610px;margin:13px auto 0;color:#80684d;font-size:15px;line-height:1.65}
+    .event-chip{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:9px 15px;border-radius:999px;background:var(--blue-soft);color:#426f91;font:700 12px Arial,sans-serif;border:1px solid #d4e6f3}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.86fr);gap:18px;margin-top:20px;align-items:start}
+    .panel{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,253,248,.92);box-shadow:0 9px 28px rgba(104,78,43,.07);padding:22px}
+    .step{display:flex;align-items:center;gap:10px;margin-bottom:15px}
+    .step-no{display:grid;place-items:center;width:31px;height:31px;flex:0 0 31px;border-radius:11px;background:var(--blue-soft);color:var(--blue-deep);font:700 13px Arial,sans-serif}
+    h2{font-size:20px;font-weight:normal;margin:0;color:#684522}
+    .hint{color:var(--muted);font:12px/1.55 Arial,sans-serif;margin:0 0 15px}
+    label{display:block;font:700 12px Arial,sans-serif;color:#73583a;margin:0 0 8px}
+    textarea{width:100%;min-height:190px;resize:vertical;padding:14px 15px;border:1px solid #dfcfb5;border-radius:14px;background:#fffefa;color:#503821;outline:none;font:14px/1.7 Arial,sans-serif;transition:border-color .2s,box-shadow .2s}
+    textarea:focus{border-color:#82b3d9;box-shadow:0 0 0 3px rgba(108,166,216,.16)}
+    textarea::placeholder{color:#b4a38d}
+    .input-note{display:flex;justify-content:space-between;gap:10px;margin-top:7px;color:#9a876f;font:11px Arial,sans-serif}
+    .actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}
+    .btn{border:0;border-radius:12px;padding:12px 16px;cursor:pointer;font:700 12px Arial,sans-serif;transition:transform .18s,box-shadow .18s,background .18s}
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{background:linear-gradient(180deg,#78b3df,#4f91c4);color:white;box-shadow:0 5px 13px rgba(65,128,175,.22)}
+    .btn-primary:hover{box-shadow:0 7px 17px rgba(65,128,175,.3)}
+    .btn-light{background:#f7efdf;color:#755735;border:1px solid #ead8b7}
+    .btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+    .side-card{background:linear-gradient(160deg,#f7fbfe,#fffaf0);border:1px solid #dce8ed}
+    .side-card h2{margin-bottom:12px}
+    .sample-name{padding:12px 13px;border-radius:12px;background:white;border:1px dashed #c9ddea;font:13px Arial,sans-serif;color:#547b98;margin:10px 0}
+    .flow{display:grid;gap:13px;margin-top:16px}
+    .flow-item{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start}
+    .flow-icon{width:28px;height:28px;border-radius:9px;background:var(--gold-soft);display:grid;place-items:center;color:#9a7036;font:700 12px Arial,sans-serif}
+    .flow-item strong{display:block;font:700 12px Arial,sans-serif;color:#6c5131;margin:1px 0 4px}
+    .flow-item p{font:12px/1.5 Arial,sans-serif;color:#927d63;margin:0}
+    .results{margin-top:20px;display:none}
+    .results.show{display:block}
+    .results-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+    .results-head h2{font-size:21px}
+    .count{font:11px Arial,sans-serif;color:#8a765e;background:#f5ecdc;padding:7px 10px;border-radius:999px;white-space:nowrap}
+    .result-list{display:grid;gap:10px}
+    .result-card{border:1px solid var(--line);border-radius:16px;background:rgba(255,253,248,.96);padding:14px 15px;box-shadow:0 5px 18px rgba(104,78,43,.045)}
+    .result-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
+    .result-name{font-weight:bold;font-size:15px;overflow-wrap:anywhere}
+    .result-index{color:#ad8a58;font:10px Arial,sans-serif;letter-spacing:.08em}
+    .linkbox{display:block;width:100%;padding:10px 11px;border-radius:10px;background:#f4f8fb;border:1px solid #e0ebf2;color:#497da5;font:11px/1.5 Arial,sans-serif;overflow-wrap:anywhere;text-decoration:none}
+    .result-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .message-preview{margin-top:11px;border:1px solid #eee2cf;border-radius:12px;background:#fffdf8;overflow:hidden}
+    .message-preview summary{cursor:pointer;list-style:none;padding:10px 12px;color:#80613b;font:700 11px Arial,sans-serif}
+    .message-preview summary::-webkit-details-marker{display:none}
+    .message-preview summary:after{content:"＋";float:right;color:#b18a51;font-size:13px}
+    .message-preview[open] summary:after{content:"−"}
+    .message-text{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;padding:0 12px 12px;color:#6d5941;font:12px/1.65 Arial,sans-serif}
+    .small-btn{padding:9px 12px;font-size:11px;border-radius:10px}
+    .copy-btn{background:#eaf3fa;color:#47799e;border:1px solid #d6e7f2}
+    .wa-btn{background:#edf5eb;color:#507b53;border:1px solid #dbe9d7}
+    .open-btn{background:#f7efdf;color:#775b35;border:1px solid #ebdcc2}
+    .bottom-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px;padding-top:14px;border-top:1px solid #eee3d1}
+    .empty{padding:22px;text-align:center;color:#9a876f;font:13px/1.6 Arial,sans-serif;border:1px dashed #e3d5bd;border-radius:15px}
+    .footer{text-align:center;color:#a38c6e;font:11px/1.7 Arial,sans-serif;margin:25px auto 0;max-width:620px}
+    .footer strong{color:#896a40;letter-spacing:.08em}
+    .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,18px);opacity:0;pointer-events:none;background:#503821;color:#fffaf1;border-radius:999px;padding:11px 17px;font:12px Arial,sans-serif;box-shadow:0 8px 22px rgba(0,0,0,.16);transition:.25s;z-index:10;max-width:calc(100% - 28px);text-align:center}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:720px){.page{width:min(100% - 20px,600px);padding-top:17px}.layout{grid-template-columns:1fr}.hero{padding:24px 14px}.panel{padding:18px}.status{font-size:10px}.topline{align-items:flex-start}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topline">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">✦</div>
+        <div><div class="brand-name">MAKEN INVITED</div><div class="brand-sub">by Maken Book</div></div>
+      </div>
+      <div class="status">TOOLS · UNDANGAN TAMU</div>
+    </div>
+
+    <header class="hero">
+      <p class="eyebrow">Personal Invitation Link</p>
+      <h1>Generator Undangan <span>Tamu</span></h1>
+      <p>Buat tautan undangan personal untuk setiap keluarga dan sahabat. Masukkan nama tamu, lalu salin atau bagikan tautan melalui WhatsApp.</p>
+      <div class="event-chip">♥ &nbsp; Tasyakuran Aqiqah & Ulang Tahun Mohammad Ghazwan Dzaky</div>
+    </header>
+
+    <div class="layout">
+      <section class="panel" aria-labelledby="inputTitle">
+        <div class="step"><span class="step-no">01</span><h2 id="inputTitle">Masukkan nama tamu</h2></div>
+        <p class="hint">Satu nama untuk setiap baris. Tulis sapaan sekaligus, misalnya “Bapak Ahmad” atau “Keluarga Ibu Siti”. Nama akan ditampilkan persis seperti yang kamu tulis.</p>
+        <label for="guestNames">DAFTAR NAMA TAMU</label>
+        <textarea id="guestNames" spellcheck="false" placeholder="Bapak Ahmad&#10;Ibu Siti &amp; Keluarga&#10;Bapak Rahmat sekeluarga"></textarea>
+        <div class="input-note"><span>Satu baris = satu tautan undangan</span><span id="lineCount">0 nama</span></div>
+        <div class="actions">
+          <button class="btn btn-primary" id="generateBtn" type="button">✦ Buat Tautan Undangan</button>
+          <button class="btn btn-light" id="clearBtn" type="button">Bersihkan</button>
+        </div>
+      </section>
+
+      <aside class="panel side-card">
+        <div class="step"><span class="step-no">02</span><h2>Cara kerja generator</h2></div>
+        <div class="sample-name">Contoh nama: <strong>Bapak Ahmad</strong></div>
+        <div class="flow">
+          <div class="flow-item"><span class="flow-icon">1</span><div><strong>Masukkan nama tamu</strong><p>Kamu bisa menambahkan satu nama atau banyak nama sekaligus.</p></div></div>
+          <div class="flow-item"><span class="flow-icon">2</span><div><strong>Generate tautan personal</strong><p>Generator membuat alamat undangan dengan nama tamu masing-masing.</p></div></div>
+          <div class="flow-item"><span class="flow-icon">3</span><div><strong>Kirim melalui WhatsApp</strong><p>Tombol WhatsApp membuka pesan undangan yang sudah disusun dengan bahasa sopan dan tautan personal. Kamu juga bisa melihat atau menyalin template pesannya.</p></div></div>
+        </div>
+        <p class="hint" style="margin:17px 0 0;padding-top:13px;border-top:1px solid #e4e9e7">Generator ini tidak mengubah undangan utama dan tidak menyimpan daftar nama ke server. Semua proses dilakukan langsung di browser.</p>
+      </aside>
+    </div>
+
+    <section class="panel results" id="results" aria-live="polite">
+      <div class="results-head"><h2>Daftar tautan personal</h2><span class="count" id="resultCount">0 tautan</span></div>
+      <div class="result-list" id="resultList"></div>
+      <div class="bottom-actions">
+        <button class="btn btn-primary" id="copyAllBtn" type="button">Salin Semua Tautan</button>
+        <button class="btn btn-light" id="downloadCsvBtn" type="button">Unduh Daftar CSV</button>
+        <button class="btn btn-light" id="downloadTxtBtn" type="button">Unduh Tautan TXT</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <strong>MAKEN INVITED · by MAKEN BOOK</strong><br>
+      Undangan Digital Mohammad Ghazwan Dzaky · Selasa, 10 November 2026<br>
+      Halaman generator khusus pengelola undangan.
+    </footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      'use strict';
+      const INVITATION_URL = 'https://digitalwedding26.github.io/Aqiqah-and-Birthday-Mohammad-Ghazwan-Dzaky/';
+      const EVENT_DATE = 'Selasa, 10 November 2026';
+      const guestNames = document.getElementById('guestNames');
+      const lineCount = document.getElementById('lineCount');
+      const generateBtn = document.getElementById('generateBtn');
+      const clearBtn = document.getElementById('clearBtn');
+      const results = document.getElementById('results');
+      const resultList = document.getElementById('resultList');
+      const resultCount = document.getElementById('resultCount');
+      const toast = document.getElementById('toast');
+      let generated = [];
+      let toastTimer;
+
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2300);
+      }
+
+      function cleanNames(value) {
+        const seen = new Set();
+        const names = [];
+        value.split(/\r?\n/).map(name => name.trim()).filter(Boolean).forEach(name => {
+          const key = name.toLocaleLowerCase('id-ID');
+          if (!seen.has(key)) { seen.add(key); names.push(name); }
+        });
+        return names;
+      }
+
+      function makeInvitationLink(name) {
+        const url = new URL(INVITATION_URL);
+        url.searchParams.set('to', name);
+        return url.toString();
+      }
+
+      function makeMessage(name, link) {
+        return `Assalamu’alaikum warahmatullahi wabarakatuh.\n\nKepada Yth.\n${name}\ndi tempat\n\nDengan hormat,\nKami sekeluarga bermaksud mengundang Bapak/Ibu/Saudara/i untuk berkenan hadir pada acara Tasyakuran Aqiqah dan Ulang Tahun Pertama putra kami:\n\nMohammad Ghazwan Dzaky\n\nInsyaAllah acara akan dilaksanakan pada:\nHari/Tanggal: ${EVENT_DATE}\nTasyakuran Aqiqah: 09.00 WITA\nUlang Tahun Pertama: 15.00 WITA\n\nInformasi lengkap mengenai acara dan lokasi dapat dilihat melalui undangan digital berikut:\n${link}\n\nBesar harapan kami Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa terbaik bagi putra kami. Atas perhatian dan doa yang diberikan, kami mengucapkan terima kasih.\n\nWassalamu’alaikum warahmatullahi wabarakatuh.\n\nHormat kami,\nKeluarga Mohammad Ghazwan Dzaky`;
+      }
+
+      function shareUrl(name, link) {
+        return 'https://wa.me/?text=' + encodeURIComponent(makeMessage(name, link));
+      }
+
+      function renderResults() {
+        resultList.replaceChildren();
+        resultCount.textContent = `${generated.length} tautan`;
+        generated.forEach((item, index) => {
+          const card = document.createElement('article');
+          card.className = 'result-card';
+
+          const top = document.createElement('div');
+          top.className = 'result-top';
+          const name = document.createElement('div');
+          name.className = 'result-name';
+          name.textContent = item.name;
+          const idx = document.createElement('span');
+          idx.className = 'result-index';
+          idx.textContent = `TAMU ${(index + 1).toString().padStart(2, '0')}`;
+          top.append(name, idx);
+
+          const link = document.createElement('a');
+          link.className = 'linkbox';
+          link.href = item.url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = item.url;
+          link.setAttribute('aria-label', `Buka undangan untuk ${item.name}`);
+
+          const message = makeMessage(item.name, item.url);
+          const preview = document.createElement('details');
+          preview.className = 'message-preview';
+          const summary = document.createElement('summary');
+          summary.textContent = 'Lihat template pesan WhatsApp';
+          const messageText = document.createElement('p');
+          messageText.className = 'message-text';
+          messageText.textContent = message;
+          preview.append(summary, messageText);
+
+          const actions = document.createElement('div');
+          actions.className = 'result-actions';
+          const copy = document.createElement('button');
+          copy.className = 'btn small-btn copy-btn';
+          copy.type = 'button';
+          copy.textContent = 'Salin Tautan';
+          copy.addEventListener('click', () => copyText(item.url, 'Tautan ' + item.name + ' berhasil disalin.'));
+          const copyMessage = document.createElement('button');
+          copyMessage.className = 'btn small-btn copy-btn';
+          copyMessage.type = 'button';
+          copyMessage.textContent = 'Salin Pesan';
+          copyMessage.addEventListener('click', () => copyText(message, 'Template pesan untuk ' + item.name + ' berhasil disalin.'));
+          const wa = document.createElement('a');
+          wa.className = 'btn small-btn wa-btn';
+          wa.href = shareUrl(item.name, item.url);
+          wa.target = '_blank';
+          wa.rel = 'noopener noreferrer';
+          wa.textContent = 'Kirim via WhatsApp';
+          wa.setAttribute('aria-label', `Kirim undangan untuk ${item.name} melalui WhatsApp`);
+          const open = document.createElement('a');
+          open.className = 'btn small-btn open-btn';
+          open.href = item.url;
+          open.target = '_blank';
+          open.rel = 'noopener noreferrer';
+          open.textContent = 'Pratinjau Undangan';
+          actions.append(copy, copyMessage, wa, open);
+          card.append(top, link, preview, actions);
+          resultList.append(card);
+        });
+        results.classList.toggle('show', generated.length > 0);
+      }
+
+      async function copyText(text, successMessage) {
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const helper = document.createElement('textarea');
+            helper.value = text;
+            helper.style.position = 'fixed';
+            helper.style.opacity = '0';
+            document.body.append(helper);
+            helper.select();
+            const ok = document.execCommand('copy');
+            helper.remove();
+            if (!ok) throw new Error('Copy tidak didukung browser');
+          }
+          showToast(successMessage);
+        } catch (error) {
+          showToast('Gagal menyalin otomatis. Silakan salin tautan secara manual.');
+        }
+      }
+
+      function generate() {
+        const names = cleanNames(guestNames.value);
+        if (!names.length) {
+          showToast('Masukkan minimal satu nama tamu terlebih dahulu.');
+          guestNames.focus();
+          return;
+        }
+        generated = names.map(name => ({ name, url: makeInvitationLink(name) }));
+        renderResults();
+        results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showToast(`${generated.length} tautan undangan berhasil dibuat.`);
+      }
+
+      function downloadFile(filename, content, type) {
+        const blob = new Blob([content], { type });
+        const objectUrl = URL.createObjectURL(blob);
+        const anchor = document.createElement('a');
+        anchor.href = objectUrl;
+        anchor.download = filename;
+        document.body.append(anchor);
+        anchor.click();
+        anchor.remove();
+        URL.revokeObjectURL(objectUrl);
+      }
+
+      function csvCell(value) {
+        return '"' + String(value).replace(/"/g, '""') + '"';
+      }
+
+      guestNames.addEventListener('input', () => {
+        const count = cleanNames(guestNames.value).length;
+        lineCount.textContent = `${count} nama`;
+      });
+      generateBtn.addEventListener('click', generate);
+      clearBtn.addEventListener('click', () => {
+        guestNames.value = '';
+        lineCount.textContent = '0 nama';
+        generated = [];
+        renderResults();
+        guestNames.focus();
+        showToast('Daftar nama telah dibersihkan.');
+      });
+      document.getElementById('copyAllBtn').addEventListener('click', () => {
+        const text = generated.map((item, i) => `${i + 1}. ${item.name}\n${item.url}`).join('\n\n');
+        if (text) copyText(text, 'Semua tautan berhasil disalin.');
+      });
+      document.getElementById('downloadCsvBtn').addEventListener('click', () => {
+        const rows = [['Nama Tamu', 'Tautan Undangan'], ...generated.map(item => [item.name, item.url])];
+        const csv = '\uFEFF' + rows.map(row => row.map(csvCell).join(',')).join('\r\n');
+        downloadFile('Daftar_Tautan_Undangan_Ghazwan.csv', csv, 'text/csv;charset=utf-8');
+      });
+      document.getElementById('downloadTxtBtn').addEventListener('click', () => {
+        const text = generated.map((item, i) => `${i + 1}. ${item.name}\n${item.url}`).join('\n\n');
+        downloadFile('Tautan_Undangan_Ghazwan.txt', text, 'text/plain;charset=utf-8');
+      });
+    })();
+  </script>
+</body>
+</html>
